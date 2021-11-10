@@ -11,6 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "producto.parquet",
+				"folderPath": "sqlserver",
 				"fileSystem": "bronze"
 			},
 			"compressionCodec": "snappy"
