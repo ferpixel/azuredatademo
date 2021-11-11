@@ -1,9 +1,9 @@
 {
-	"name": "SQLServerToDatalake",
+	"name": "SQLServerToBronze",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "AddressToBronze",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -17,30 +17,15 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select top 1 * from saleslt.product",
+						"sqlReaderQuery": "SELECT * FROM SalesLT.Address",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
-					},
-					"sink": {
-						"type": "ParquetSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "ParquetWriteSettings"
-						}
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSqlTable1",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "Parquet1",
+						"referenceName": "AzureSql",
 						"type": "DatasetReference"
 					}
 				]
