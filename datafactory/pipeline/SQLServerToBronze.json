@@ -169,7 +169,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "CustomerAddress",
+						"referenceName": "Product",
 						"type": "DatasetReference"
 					}
 				]
@@ -212,7 +212,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "CustomerAddress",
+						"referenceName": "ProductCategory",
 						"type": "DatasetReference"
 					}
 				]
@@ -255,7 +255,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "CustomerAddress",
+						"referenceName": "ProductDescription",
 						"type": "DatasetReference"
 					}
 				]
