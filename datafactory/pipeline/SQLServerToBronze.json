@@ -189,7 +189,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT * FROM SalesLT.ProductCategory",
+						"sqlReaderQuery": "SELECT * FROM SalesLT.ProductModel",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -212,7 +212,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ProductCategory",
+						"referenceName": "ProductModel",
 						"type": "DatasetReference"
 					}
 				]
@@ -256,6 +256,49 @@
 				"outputs": [
 					{
 						"referenceName": "ProductDescription",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "ProductModelToBronze",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT * FROM SalesLT.Product",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureSql",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Product",
 						"type": "DatasetReference"
 					}
 				]
