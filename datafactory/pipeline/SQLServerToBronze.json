@@ -175,7 +175,7 @@
 				]
 			},
 			{
-				"name": "CustomerAddressToBronze_copy1_copy1",
+				"name": "ProductCategoryToBronze",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -189,7 +189,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT * FROM SalesLT.Customer",
+						"sqlReaderQuery": "SELECT * FROM SalesLT.ProductCategory",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
