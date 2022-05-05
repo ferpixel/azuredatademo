@@ -22,11 +22,11 @@
 			"recurrence": {
 				"frequency": "Week",
 				"interval": 1,
-				"startTime": "2022-05-05T10:05:00Z",
-				"timeZone": "UTC",
+				"startTime": "2022-05-05T10:05:00",
+				"timeZone": "Argentina Standard Time",
 				"schedule": {
 					"minutes": [
-						13
+						16
 					],
 					"hours": [
 						16
