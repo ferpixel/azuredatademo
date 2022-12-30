@@ -1,0 +1,9 @@
+{
+	"name": "adf-demo-tenaris-databricks1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ff96bea5-9261-4746-a5f3-3155ac762d56",
+		"tenantId": "3048dc87-43f0-4100-9acb-ae1971c79395"
+	}
+}
